@@ -19,7 +19,7 @@ module.exports.addReview = async function(req,res){
         subject:req.body.subject,
         rating:req.body.rating,
         description:req.body.description,
-        product_id:req.body.productId
+        product_id:req.params.productId
     });
     res.redirect(`/products/profile/${req.params.productId}`)
 }
